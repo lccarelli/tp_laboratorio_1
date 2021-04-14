@@ -60,7 +60,7 @@ void showCalculates(float *pSum, float *pSub, float *pDiv, float *pMult,
 
 		printResult(pSum, "\nEl resultado de A+B es: ");
 
-		printResult(pSub, "\nEl resultado de A+B es: ");
+		printResult(pSub, "\nEl resultado de A-B es: ");
 
 		if (*pDiv == 0) printResult(pDiv, "\nNo se puede dividir por -> ");
 		else printResult(pDiv, "\nEl resultado de A/B es: ");
@@ -73,7 +73,7 @@ void showCalculates(float *pSum, float *pSub, float *pDiv, float *pMult,
 
 		if (*pFactB == 0) printf("\nNo se puede calcular el factorial porque el operador B -> es CERO");
 		else if (*pFactB == -1) printf("\nNo se puede calcular el factorial porque el operador A -> NO es un ENTERO");
-		else printf("\nEl factorial de A es: %.2Lf", *pFactB);
+		else printf("\nEl factorial de  B es: %.2Lf", *pFactB);
 
 	} else {
 		printf("\nERROR -> mostrando resultados");
