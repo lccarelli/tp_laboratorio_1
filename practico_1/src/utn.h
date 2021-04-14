@@ -15,14 +15,14 @@
 
 
 /**
- * @brief ->	utn_getNumeroEntero -> Input de un dato, devuelve un numero entero
- * @param ->	number -> Puntero al espacio de memoria donde se dejara el resultado de la funcion
- * @param ->	message -> Es el mensaje a ser mostrado
- * @param ->	errorMessage -> Es el mensaje de Error a ser mostrado
- * @param ->	min -> Es el numero maximo a ser aceptado
- * @param ->	max -> Es el minimo minimo a ser aceptado
- * @param ->	retries -> Cantidad de reintentos
- * @return ->	Retorna 0 si se obtuvo el numero y -1 si no
+ * \brief ->	utn_getNumeroEntero -> Devuelve un numero entero
+ * \param ->	int* number 		-> Puntero donde se guardara el numero ingresado por stdin
+ * \param ->	char* message 		-> Es el mensaje a ser mostrado
+ * \param ->	char* errorMessage 	-> Es el mensaje de Error a ser mostrado
+ * \param ->	int min				-> Es el numero minimo a ser aceptado
+ * \param ->	int max				-> Es el numero maximo a ser aceptado
+ * \param ->	int retries 		-> Cantidad de reintentos
+ * \return ->	int 				-> 0 si se obtuvo el numero || -1 si no se obtuvo el numero
 **/
 int utn_getNumeroEntero(
 					int* number,
@@ -34,14 +34,14 @@ int utn_getNumeroEntero(
 					);
 
 /**
- * @brief ->	utn_getNumeroDecimal -> Input de un dato, devuelve un numero decimal
- * @param ->	number -> Puntero al espacio de memoria donde se dejara el resultado de la funcion
- * @param ->	message -> Es el mensaje a ser mostrado
- * @param ->	errorMessage -> Es el mensaje de Error a ser mostrado
- * @param ->	min -> Es el numero maximo a ser aceptado
- * @param ->	max -> Es el minimo minimo a ser aceptado
- * @param ->	retries -> Cantidad de reintentos
- * @return ->	Retorna 0 si se obtuvo el numero y -1 si no
+ * \brief ->	utn_getNumeroDecimal-> Devuelve un numero entero
+ * \param ->	int* number 		-> Puntero donde se guardara el numero ingresado por stdin
+ * \param ->	char* message 		-> Es el mensaje a ser mostrado
+ * \param ->	char* errorMessage 	-> Es el mensaje de Error a ser mostrado
+ * \param ->	int min				-> Es el numero minimo a ser aceptado
+ * \param ->	int max				-> Es el numero maximo a ser aceptado
+ * \param ->	int retries 		-> Cantidad de reintentos
+ * \return ->	int 				-> 0 si se obtuvo el numero || -1 si no se obtuvo el numero
 **/
 int utn_getNumeroDecimal(
 							float* number,
@@ -53,8 +53,8 @@ int utn_getNumeroDecimal(
 						);
 
 /**
- * @brief ->	ifInteger -> Chequea que un numero se entero
- * @param ->	number -> Puntero al espacio de memoria donde se dejara el resultado de la funcion
- * @return ->	Retorna 1 (TRUE) si es entero - 0 si no lo es
+ * \brief ->	ifInteger 		-> Chequea que un numero se entero
+ * \param ->	float number	-> Numero a comprobar
+ * \return ->	int 			-> 1 (TRUE) si es entero || 0 si es FALSE
 **/
 int ifInteger(float number);

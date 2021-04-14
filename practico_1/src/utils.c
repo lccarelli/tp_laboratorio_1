@@ -13,6 +13,12 @@
 #include "utn.h"
 #include "calculos.h"
 
+/**
+ * \brief 	->	printResult 	-> Muestra resultado por pantalla
+ * \param 	->	float* pResult 	-> Puntero donde se guarda el resultado
+ * \param 	->	char* message  	-> Es el mensaje a ser mostrado
+ * \return  ->	void 			-> no tiene retorno
+**/
 void printResult(float* pResult, char* message);
 
 void getMenu(float a , float b, int* select){

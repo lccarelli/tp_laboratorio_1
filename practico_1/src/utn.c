@@ -24,39 +24,39 @@
 
 /* FUNCIONES PRIVADAS */
 /**
- * @brief ->	getInt -> Recorre una cadena y verifica si se encuentra un numero entero.
- * @param ->	number -> puntero donde se va a guardar el numero entero
- * @return ->	int Return (-1) if Error [Invalid or NULL params] - (0) if Ok
+ * \brief ->	getInt 		 -> Recorre una cadena y verifica si se encuentra un numero entero.
+ * \param ->	int* number  -> puntero donde se va a guardar el numero entero
+ * \return ->	int			 -> -1 error [Invalid or NULL params] || 0 - Ok
 **/
 static int getInt(int* number);
 
 /**
- * @brief ->	isNumber -> Recorre una cadena y verifica que sea numerica
- * @param ->	string -> puntero donde se va a guardar el texto
- * @return ->	int Return (-1) if Error [Invalid or NULL params] - (0) if Ok - (1) if TRUE
+ * \brief ->	isNumber 	 -> Recorre una cadena y verifica que sea numerica
+ * \param ->	char* string -> puntero donde se va a guardar el texto
+ * \return ->	int 		 -> -1 error [Invalid or NULL params] || 0 - Ok || 1 - TRUE
 **/
 static int isNumber(char* string);
 
 
 /**
- * @brief ->	myGets -> Lee stdin hasta que encuentra un '\n' o hasta que se haya copiado la cadena
- * @param ->	string -> puntero donde se va a guardar el texto
- * @param ->	len	-> longitud de la cadena
- * @return ->	int Return (-1) if Error [Invalid or NULL params] - (0) if Ok
+ * \brief ->	myGets 		 -> Lee stdin hasta que encuentra un '\n' o hasta que se haya copiado la cadena
+ * \param ->	char* string -> puntero donde se va a guardar el texto
+ * \param ->	int len		 -> longitud de la cadena
+ * \return ->	int 		 -> -1 error [Invalid or NULL params] || 0 - Ok
 **/
 static int myGets(char* string, int len);
 
 /**
- * @brief ->	getFloat -> Recorre una cadena buscando un numero con decimal
- * @param ->	number -> puntero donde se va a guardar el numero float
- * @return ->	int Return (-1) if Error [Invalid or NULL params] - (0) if Ok
+ * \brief ->	getFloat 	 -> Recorre una cadena buscando un numero con decimal
+ * \param ->	float* number-> puntero donde se va a guardar el numero float
+ * \return ->	int 		 -> -1 error [Invalid or NULL params] || 0 - Ok
 **/
 static int getFloat(float* number);
 
 /**
- * @brief ->	isFloat -> Recorre una cadena y verifica si es un numero float
- * @param ->	string -> puntero donde se va a guardar el texto
- * @return ->	int Return (-1) if Error [Invalid or NULL params] - (0) if Ok - (1) if TRUE
+ * \brief ->	isFloat 	 -> Recorre una cadena y verifica si es un numero float
+ * \param ->	char* string -> puntero donde se va a guardar el texto
+ * \return ->	int 		 -> -1 error [Invalid or NULL params] || 0 - Ok || 1 - TRUE
 **/
 static int isFloat(char* string);
 
