@@ -60,11 +60,13 @@ static int getFloat(float* number);
 **/
 static int isFloat(char* string);
 
+
 static int getInt(int* number){
 	int result;
 	char buffer[LIMIT_INTEGER];
 
 	if(number!=NULL){
+
 		if(myGets(buffer, sizeof(buffer))==OK && isNumber(buffer)){
 			*number = atoi(buffer);
 			result = OK;
@@ -83,7 +85,9 @@ static int isNumber(char* string){
 
 		for(i=0; i<strlen(string) && string[i]!='\0'; i++){
 
-			if(string[i]<'0' || string[i]>'9') result = OK; //ok but isNUmber false
+			if(string[i]<'0' || string[i]>'9') {
+				result = OK; //ok but isNUmber false
+			}
 		}
 	} else result = noOK;
 
@@ -92,11 +96,17 @@ static int isNumber(char* string){
 
 static int myGets(char* string, int len){
 	int result;
+	//char buffer[LIMIT_TEXT];
 
 	if(string!=NULL && len>0 && fgets(string, len, stdin)==string){
 
 		__fpurge(stdin);
-		if(string[strlen(string)-1]=='\n') string[strlen(string)-1] = '\0';
+		if(string[strlen(string)-1]=='\n')
+		{
+			string[strlen(string)-1] = '\0';
+		}
+
+		//strncpy(string, buffer, len);
 		result = OK;
 
 	} else  result = noOK;
@@ -110,7 +120,7 @@ static int getFloat(float* number){
 
 	if(number!=NULL){
 
-		if(myGets(buffer,sizeof(buffer))==OK && isFloat(buffer)){
+		if(myGets(buffer,sizeof(buffer))==OK && isFloat(buffer) && isNumber(buffer)){
 			*number = atof(buffer);
 			result = OK;
 		}
@@ -136,7 +146,6 @@ static int isFloat(char* string){
 
 	return result;
 }
-
 
 /* FUNCIONES PRIVADAS - fin */
 
@@ -207,7 +216,6 @@ int utn_getNumeroDecimal(
 	}
 	return result;
 }
-
 
 int ifInteger(float number){
 

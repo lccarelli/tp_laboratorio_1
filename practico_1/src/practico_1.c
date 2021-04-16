@@ -56,6 +56,7 @@ int main(void) {
 
 				(flagA == 0 || flagB == 0) ?
 					printf("\nERROR -> falta ingresar un operador") :
+					getMenuCalculate(operA , operB);
 					excecuteCalculates(operA, operB, &sumRt, &subtRt, &divRt, &multRt, &factARt, &factBRt, &flagCalculate);
 				break;
 

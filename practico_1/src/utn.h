@@ -52,6 +52,14 @@ int utn_getNumeroDecimal(
 							int retries
 						);
 
+int utn_getTexto(
+					char* string,
+					int len,
+					char* message,
+					char* errorMessage,
+					int retries
+					);
+
 /**
  * \brief ->	ifInteger 		-> Chequea que un numero se entero
  * \param ->	float number	-> Numero a comprobar

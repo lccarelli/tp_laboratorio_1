@@ -9,7 +9,6 @@
  */
 #ifndef CALCULOS_H_INCLUDE
 #define CALCULOS_H_INCLUDE
-
 #endif /* CALCULOS_H_ */
 
 /**
@@ -54,4 +53,6 @@ void getMultiplication(float a, float b, float *pResult);
  * \return 	-> long double result -> si es numero mayor a 1 retorna el resultado || si el operador es 1 retorna 1 || si es otro valor retorna 0
  */
 long double getFactorial(float a);
+
+
 

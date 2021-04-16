@@ -12,6 +12,12 @@
 #include <stdio_ext.h>
 #include "utn.h"
 #include "calculos.h"
+#define MENU_CALCULATES "\nMenú de cálculos:"
+#define MENU_ADD "\n\ta). Calcular la suma (A+B)->(%.2f + %.2f)"
+#define MENU_SUBSTRACTION "\n\tb). Calcular la resta (A-B)->(%.2f - %.2f)"
+#define MENU_DIVISION "\n\tc). Calcular la division (A/B)->(%.2f / %.2f)"
+#define MENU_MULTIPLICATION "\n\td). Calcular la multiplicacion (A*B)->(%.2f * %.2f)"
+#define MENU_FACTORIAL "\n\te). Calcular el factorial (A!) y (B!)->(%.2f!) && (%.2f!)"
 
 /**
  * \brief 	->	printResult 	-> Muestra resultado por pantalla
@@ -30,6 +36,15 @@ void getMenu(float a , float b, int* select){
 			"\n\t4). Informar resultados"
 			"\n\t5). salir\n", a, b);
 	utn_getNumeroEntero(select, "\nIngrese su seleccion -> ", "\nERROR -> Debe ser una de las opciones", 1, 5, 3);
+}
+
+void getMenuCalculate(float a , float b){
+	printf(MENU_CALCULATES);
+	printf(MENU_ADD, a, b);
+	printf(MENU_SUBSTRACTION, a, b);
+	printf(MENU_DIVISION, a, b);
+	printf(MENU_MULTIPLICATION, a, b);
+	printf(MENU_FACTORIAL, a, b);
 }
 
 

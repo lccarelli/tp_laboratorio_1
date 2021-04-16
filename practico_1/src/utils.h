@@ -23,6 +23,14 @@
 void getMenu(float a, float b, int* select);
 
 /* -----------------------------------------------------------------------------
+ * \brief 	-> 	getMenuCalculate 	-> muestra un menu de las operaciones a calcular
+ * \param 	-> 	float a 	-> operador numerico
+ * \param 	-> 	float b 	-> operador numerico
+ * \return 	-> 	void 		-> no tiene retorno
+ */
+void getMenuCalculate(float a , float b);
+
+/* -----------------------------------------------------------------------------
  * \brief 	-> excecuteCalculates -> valida que todos los argumentos no sean NULL
  * 		  	-> y ejecuta todas las operaciones, de los operadores ingresados
  * \param 	-> float a 		-> operador numerico
