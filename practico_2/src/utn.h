@@ -45,5 +45,11 @@ int utn_getString(char* string, int len,char* message, char* errorMessage, int r
 int utn_stringToInteger(char stringValue[], int* integerValue);
 int validarNumero (char numeros[]);
 int inputs_getString(char* input, char message[], char eMessage[], int lowLimit, int hiLimit);
+/**
+ * @brief ->	*strlwr -> Simula ser la funcion de la libreria que se encuentra dentro de la biblioteca string.
+ * @param ->	string -> puntero donde se va a guardar el texto
+ * @return ->	int Return (-1) if Error [Invalid or NULL params] - (0) if Ok
+**/
+char* strlwr(char* str);
 
 #endif /* UTN_H_ */

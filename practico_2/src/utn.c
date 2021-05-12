@@ -11,13 +11,6 @@
 //firmas de privadas
 
 /**
- * @brief ->	*strlwr -> Simula ser la funcion de la libreria que se encuentra dentro de la biblioteca string.
- * @param ->	string -> puntero donde se va a guardar el texto
- * @return ->	int Return (-1) if Error [Invalid or NULL params] - (0) if Ok
-**/
-static char *strlwr(char *str);
-
-/**
  * @brief ->	getString -> Toma el ingreso por teclado y lo copia en una cadena, con la funcion strncpy
  * @param ->	string -> puntero donde se va a guardar el texto
  * @param ->	len int -> longitud de la cadena
@@ -163,8 +156,8 @@ int validarNumero (char numeros[]){
 //funciones privadas
 
 //funcion copiada de internet para poder utilizar en linux strlwr, porque no se encuentra normalizada
-static char *strlwr(char *str){
-  unsigned char *p = (unsigned char *)str;
+char* strlwr(char* str){
+  unsigned char *p = (unsigned char*)str;
   while (*p) {
      *p = tolower((unsigned char)*p);
       p++;
@@ -244,7 +237,6 @@ static int formatString(char* string, int len){
     if(string != NULL){
     	if(	getString(buffer,sizeof(buffer))==0 && isString(buffer,sizeof(buffer)) && strnlen(buffer,sizeof(buffer))<len){
     		strlwr(buffer);
-    		buffer[0]=toupper(buffer[0]);
     		strncpy(string,buffer,len);
 			result = OK;
 		}
