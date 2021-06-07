@@ -237,6 +237,7 @@ static int formatString(char* string, int len){
     if(string != NULL){
     	if(	getString(buffer,sizeof(buffer))==0 && isString(buffer,sizeof(buffer)) && strnlen(buffer,sizeof(buffer))<len){
     		strlwr(buffer);
+    		buffer[0]=toupper(buffer[0]);
     		strncpy(string,buffer,len);
 			result = OK;
 		}

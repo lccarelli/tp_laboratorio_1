@@ -4,6 +4,7 @@
 #define EMPLOYEE_MAX 1100
 #define OK 0
 #define ERROR -1
+#define NAME_LEN 51
 typedef struct
 {
     int id;
@@ -36,5 +37,10 @@ int employee_getHorasTrabajadasStr(Employee* this,char* resultado);
 
 int employee_setSueldoStr(Employee* this,char* sueldo);
 int employee_getSueldoStr(Employee* this,char* resultado);
+
+int employee_requestId(int* id);
+int employee_requestNombre(char* name);
+int employee_requestSueldo(int* sueldo);
+int employee_requestHorasTrabajadas(int* horasTrabajadas);
 
 #endif // employee_H_INCLUDED

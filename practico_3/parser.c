@@ -15,14 +15,13 @@ static int parser_add(FILE* pFile, LinkedList* pArrayListEmployee, int method);
  */
 int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee)
 {
-	int result = OK;
+	int result = ERROR;
 
 	if(pFile!=NULL && pArrayListEmployee!=NULL){
 
 		do {
-
-			if(parser_add(pFile, pArrayListEmployee, ADD_CHAR)){
-				result = ERROR;
+			if(parser_add(pFile, pArrayListEmployee, ADD_CHAR) == 0){
+				result = OK;
 			}
 
 
@@ -40,14 +39,13 @@ int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee)
  */
 int parser_EmployeeFromBinary(FILE* pFile , LinkedList* pArrayListEmployee)
 {
-	int result = OK;
+	int result = ERROR;
 
 	if(pFile!=NULL && pArrayListEmployee!=NULL){
 
 		do {
-
-			if(parser_add(pFile, pArrayListEmployee, ADD_BINARY)){
-				result = ERROR;
+			if(parser_add(pFile, pArrayListEmployee, ADD_BINARY) == 0){
+				result = OK;
 			}
 
 		} while(!feof(pFile));
@@ -70,6 +68,7 @@ static int parser_add(FILE* pFile, LinkedList* pArrayListEmployee, int method){
 		empleado = employee_new();
 		if(fread(empleado, sizeof(Employee), 1, pFile) == 1){
 			ll_add(pArrayListEmployee, empleado);
+			printf("\nentre a binary");
 			result = OK;
 		}
 	}

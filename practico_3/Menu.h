@@ -11,11 +11,15 @@
 #define SAVE_TXT 8
 #define SAVE_BINARY 9
 #define EXIT 0
+#define NOMBRE 1
+#define SUELDO 2
+#define HORAS_TRABAJADAS 3
 /**
  * \brief 	-> menu_principal
  * \param 	-> int* select	  	-> puntero donde se guarda seleccion
  * \return 	-> void 		  	-> no retorna
  **/
 void menu_main(int* select);
+void menu_modify(int* select);
 
 #endif /* MENU_H_ */

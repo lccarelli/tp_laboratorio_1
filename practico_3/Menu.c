@@ -20,3 +20,12 @@ void menu_main(int* select){
 	utn_getNumero(select, "\nIngrese su seleccion -> ", "\nERROR -> Debe ser una de las opciones", 0, 9, 3);
 }
 
+void menu_modify(int* select){
+
+	printf("\nMenu para modificar:"
+			"\n\t1). NOMBRE"
+			"\n\t2). SUELDO"
+			"\n\t3). HORAS TRABAJADAS"
+			"\n\t0). salir\n");
+	utn_getNumero(select, "\nIngrese su seleccion -> ", "\nERROR -> Debe ser una de las opciones", 0, 3, 3);
+}

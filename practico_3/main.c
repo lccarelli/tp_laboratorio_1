@@ -33,7 +33,6 @@ int main()
             case READ_TXT:
                 controller_loadFromText("data.csv",listaEmpleados);
                 break;
-
             case READ_BINARY:
             	controller_loadFromBinary("data.bin", listaEmpleados);
             	break;

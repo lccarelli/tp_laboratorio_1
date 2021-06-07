@@ -170,5 +170,40 @@ int employee_getSueldoStr(Employee* this,char* resultado){
     return result;
 };
 
+int employee_requestId(int* id){
+	int result = ERROR;
+	int number;
+	if(
+			id!=NULL &&
+			utn_getNumero(&number, "\nIngrese ID Empleado-> ", "\nERROR-> ID invalido", 1, 1000, 3) == OK
+	){
+		*id = number;
+		result = OK;
+	}
+	return result;
+}
+
+int employee_requestNombre(char* nombre){
+	int result = ERROR;
+	if (utn_getString(nombre, NAME_LEN, "\nNOMBRE?: ", "\nERROR-> NOMBRE", 3) == 0)
+		result = OK;
+	return result;
+}
+
+int employee_requestSueldo(int* sueldo){
+	int result = ERROR;
+	if (utn_getNumero(sueldo, "\nSUELDO?: ", "\nERROR-> SUELDO", 0, 1000000000, 3) == OK)
+		result = OK;
+	return result;
+}
+
+int employee_requestHorasTrabajadas(int* horasTrabajadas){
+	int result = ERROR;
+	if (utn_getNumero(horasTrabajadas, "\nHORAS TRABAJADAS?: ", "\nERROR-> HORAS TRABAJADAS", 0, 1000000000, 3) == OK)
+		result = OK;
+	return result;
+}
+
+
 
 
